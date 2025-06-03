@@ -259,6 +259,23 @@ d3.select("#modalOverlay").on("click", function (event) {
   }
 });
 
+const timelineEvents = document.querySelectorAll(".timeline-event");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+timelineEvents.forEach((el) => observer.observe(el));
+
 svg.call(
   d3
     .zoom()
