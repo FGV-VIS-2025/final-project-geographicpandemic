@@ -124,6 +124,17 @@ function drawCountryPanel(countryCode, countryName, clickX, clickY) {
         countryName
       )}&client_id=pmJQy7m7iO-EuFW_0FYg4vLuHQ2y5UkzSLaIzFlKLiE`
     ).then((res) => res.json()),
+    // Busca estatísticas globais
+    fetch("https://disease.sh/v3/covid-19/all")
+      .then((res) => res.json())
+      .then((data) => {
+        d3.select("#totalCases").text(data.cases.toLocaleString("pt-BR"));
+        d3.select("#totalDeaths").text(data.deaths.toLocaleString("pt-BR"));
+        d3.select("#totalPop").text(data.population.toLocaleString("pt-BR"));
+      })
+      .catch((err) => {
+        console.warn("Erro ao carregar estatísticas globais:", err);
+      }),
   ])
     .then(([covid, countryData, unsplash]) => {
       const country = countryData[0];
