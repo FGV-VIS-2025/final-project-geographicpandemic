@@ -43,21 +43,25 @@
     <p id="zoomHint">🔍 Arraste ou dê zoom para melhor visualização</p>
 
     <!-- Gráfico flutuante com painel informativo-->
-    <div id="countryInfoPanel" class="hidden">
-      <button id="closeInfo">✖</button>
-      <div class="header">
-        <img id="countryFlag" src="" alt="Bandeira" />
-        <h2 id="countryName">Nome do País</h2>
+    <div id="modalOverlay" class="hidden">
+      <div id="modalContent">
+        <button id="closeInfo">✖</button>
+        <div class="header">
+          <img id="countryFlag" src="" alt="Bandeira" />
+          <h2 id="countryName">Nome do País</h2>
+        </div>
+        <div id="countryBackground"></div>
+        <div class="details">
+          <p><strong>Capital:</strong> <span id="countryCapital"></span></p>
+          <p>
+            <strong>População:</strong> <span id="countryPopulation"></span>
+          </p>
+          <p><strong>Casos:</strong> <span id="countryCases"></span></p>
+          <p><strong>Mortes:</strong> <span id="countryDeaths"></span></p>
+          <p><strong>Continente:</strong> <span id="countryRegion"></span></p>
+        </div>
+        <div id="countryChart"></div>
       </div>
-      <div id="countryBackground"></div>
-      <div class="details">
-        <p><strong>Capital:</strong> <span id="countryCapital"></span></p>
-        <p><strong>População:</strong> <span id="countryPopulation"></span></p>
-        <p><strong>Casos:</strong> <span id="countryCases"></span></p>
-        <p><strong>Mortes:</strong> <span id="countryDeaths"></span></p>
-        <p><strong>Continente:</strong> <span id="countryRegion"></span></p>
-      </div>
-      <div id="countryChart"></div>
     </div>
 
     <!-- Footer -->

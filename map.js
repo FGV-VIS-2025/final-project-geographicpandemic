@@ -106,12 +106,8 @@ function updateMap(selectedDate = null) {
 }
 
 function drawCountryPanel(countryCode, countryName, clickX, clickY) {
-  const panel = d3.select("#countryInfoPanel");
-  panel.classed("hidden", false);
-
-  // Posiciona o painel próximo ao clique
-  panel.style("left", `${clickX + 40}px`);
-  panel.style("top", `${clickY}px`);
+  const modal = d3.select("#modalOverlay");
+  modal.classed("hidden", false);
 
   // Limpa gráfico anterior
   d3.select("#countryChart").html("");
@@ -243,7 +239,13 @@ function showInfoPanel(countryCode) {
 }
 
 d3.select("#closeInfo").on("click", () => {
-  d3.select("#countryInfoPanel").classed("hidden", true);
+  d3.select("#modalOverlay").classed("hidden", true);
+});
+
+d3.select("#modalOverlay").on("click", function (event) {
+  if (event.target.id === "modalOverlay") {
+    d3.select("#modalOverlay").classed("hidden", true);
+  }
 });
 
 svg.call(
