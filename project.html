@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Visualização Interativa de Dados da COVID-19</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f7f9fc;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px;
+      }
+      h1 {
+        color: #2a5a88;
+        margin-bottom: 10px;
+      }
+      h2 {
+        color: #2a5a88;
+        margin-top: 40px;
+      }
+      .team {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .cover-img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: 20px;
+      }
+      .button {
+        display: inline-block;
+        background-color: #2a5a88;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px 0;
+      }
+      .button:hover {
+        background-color: #1b3e60;
+      }
+      ul {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Visualização Interativa e Exploratória de Dados Globais da COVID-19
+      </h1>
+
+      <div class="team">
+        <strong>Membros da Equipe:</strong> <br />
+        Mariana Oliveira — EMAP - FGV Rio de Janeiro
+      </div>
+
+      <img
+        class="cover-img"
+        src="files/covid_summary.png"
+        alt="Resumo visual do projeto"
+      />
+
+      <h2>Resumo</h2>
+      <p>
+        Este projeto apresenta uma plataforma web interativa para visualização,
+        análise e contextualização histórica da pandemia de COVID-19 ao redor do
+        mundo. A ferramenta permite aos usuários explorar visualmente dados
+        epidemiológicos globais, séries temporais semanais, informações
+        demográficas e contextuais de cada país, além de conter uma linha do
+        tempo histórica e uma galeria ilustrativa.
+      </p>
+
+      <h2>Artigo Completo</h2>
+      <a class="button" href="files/Relatório_Visualização.pdf" target="_blank"
+        >📄 Acessar o Artigo (PDF)</a
+      >
+
+      <h2>Vídeo de Demonstração</h2>
+      <a
+        class="button"
+        href="https://drive.google.com/file/d/1fayV3SjriF3dQgd35x7ZudtS-jbAPvR8/view?usp=sharing"
+        target="_blank"
+        >▶️ Assistir Demonstração</a
+      >
+
+      <h2>Execução do Software</h2>
+      <ul>
+        <li>Clone o repositório ou baixe os arquivos localmente.</li>
+        <li>Abra um terminal na pasta do projeto.</li>
+        <li>Execute um servidor local (exemplo com Python):</li>
+        <pre>python -m http.server 8000</pre>
+        <li>Acesse no navegador: <strong>http://localhost:8000</strong></li>
+      </ul>
+
+      <h2>Materiais Adicionais</h2>
+      <ul>
+        <li><a href="README.md" target="_blank">Documentação README</a></li>
+        <li>
+          <a
+            href="https://github.com/FGV-VIS-2025/final-project-geographicpandemic"
+            target="_blank"
+            >Repositório Completo no GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
